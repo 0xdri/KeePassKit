@@ -542,8 +542,8 @@ NSString *const KPKMetaEntryKeePassXGroupTreeState  = @"KPX_GROUP_TREE_STATE";
   /* Binaries */
   [[self binaries] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     KPKBinary *binary = obj;
-    size += [binary.key length];
-    size += [binary.data length];
+    size += binary.name.length;
+    size += binary.data.length;
   }];
   
   /* Autotype */
